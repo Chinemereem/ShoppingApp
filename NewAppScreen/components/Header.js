@@ -5,10 +5,10 @@ const Header = ({title}) => {
   return (
     <View style={styles.header}>
       <Text style={styles.text}>{title}</Text>
-      <Image
+      {/* <Image
         source={{uri: 'https://randomuser.me/api/portraits/men/1.jpg'}}
         style={styles.img}
-      />
+      /> */}
     </View>
   );
 };
