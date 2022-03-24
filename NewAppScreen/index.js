@@ -14,7 +14,7 @@ import HermesBadge from './components/HermesBadge';
 import LearnMoreLinks from './components/LearnMoreLinks';
 import DebugInstructions from './components/DebugInstructions';
 import ReloadInstructions from './components/ReloadInstructions';
-
+import AddItems from './components/AddItem';
 export {
   Colors,
   Header,
@@ -22,4 +22,5 @@ export {
   LearnMoreLinks,
   DebugInstructions,
   ReloadInstructions,
+  AddItems,
 };
