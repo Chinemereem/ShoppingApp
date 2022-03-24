@@ -1,11 +1,13 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {XIcon} from '../../asset/Svg';
 
-const ListItems = ({item}) => {
+const ListItems = ({item, deleteItem}) => {
   return (
     <TouchableOpacity style={styles.listItems}>
       <View style={styles.listItemsView}>
         <Text style={styles.listItemsText}> {item.text}</Text>
+        <XIcon onPress={() => deleteItem(item.id)} />
       </View>
     </TouchableOpacity>
   );
