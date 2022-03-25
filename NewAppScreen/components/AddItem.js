@@ -7,18 +7,23 @@ import {
   StyleSheet,
 } from 'react-native';
 
-const AddItems = ({title, addItem}) => {
+const AddItems = ({addItem}) => {
   const [text, setText] = useState('');
   const onChange = textValue => setText(textValue);
   return (
     <View style={styles.header}>
-      <Text style={styles.text}>{title}</Text>
       <TextInput
         placeholder="Add Item"
         style={styles.input}
-        onChange={onChange}
+        onChangeText={onChange}
+        value={text}
       />
-      <TouchableOpacity style={styles.btn} onPress={() => addItem(text)}>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => {
+          addItem(text);
+          setText(text);
+        }}>
         <Text style={styles.btnText}>Add Item</Text>
       </TouchableOpacity>
     </View>
